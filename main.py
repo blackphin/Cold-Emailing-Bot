@@ -1,4 +1,4 @@
-# import xlrd
+import xlrd
 import smtplib, xlrd
 from time import sleep
 
@@ -9,30 +9,8 @@ email_password = "Sales@2020"
 subject = "Let us help you grow your Business and turn it towards profitability"
 # url = "https://mca.gov.in/content/mca/global/en/data-and-reports/company-llp-info/incorporated-closed-month.html"
 
-# file = open(r"C:\Users\shiva\Downloads\Book1.txt", "r")
-# message = file.read()
-# file.close()
-
-message = (
-    "-Are you a Loss Making Business or Startup and want to make it profitable?"
-    + "\n"
-    + "-Are you having problems setting up different departments or production units?"
-    + "\n"
-    + "-Are you having trouble keeping up with various Compliance Laws"
-    + "\n\n"
-    + "We can Help"
-    + "\n\n"
-    + "We are a B2B Integration Company dedicated to assisting firms like yours with non-core business areas such as Production, Store, Logistics, etc."
-    + "\n"
-    + "Our services include Establishing Manufacturing or Production Units, Setting up Various Departments, Provide IMS or ERP Softwares, Customized & Implemented according to your use case sceanrio and firm."
-    + "\n"
-    + "With us you can get a one point of contact for all your consultancy or outsource needs."
-    + "\n\n"
-    + "Feel free to Contact us."
-    + "\n"
-    + "Watch this PPT for further clarification of our services: https://shared-assets.adobe.com/link/dbedf96f-563c-48a7-628a-cc006c37365c"
-)
-
+message_file = open(r"D:/OneDrive/Repositories/Cold-Emailing-Bot/message.txt", "r")
+message = message_file.read()
 
 wb = xlrd.open_workbook(r"C:\Users\shiva\Downloads\Book1.xls")
 sheet = wb.sheet_by_index(0)
